@@ -6,7 +6,7 @@ describe Api::V1::PasswordsController do
       request.env['devise.mapping'] = Devise.mappings[:user]
       @credentials = {:email => 'asd@def.com', :password => 'password'}
       @user = FactoryGirl.create(:user, @credentials)
-      @user.confirm!
+#@user.confirm!
     end
     
     it "should send reset password request" do

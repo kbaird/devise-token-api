@@ -6,7 +6,7 @@ describe Api::V1::SessionsController do
       request.env['devise.mapping'] = Devise.mappings[:user]
       @credentials = {:email => 'asd@def.com', :password => 'password', :authentication_token => 'asd'}
       @user = FactoryGirl.create(:user, @credentials)
-      @user.confirm!
+#@user.confirm!
     end
     
     describe "sign in" do

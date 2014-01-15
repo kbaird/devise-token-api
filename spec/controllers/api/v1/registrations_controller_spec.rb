@@ -25,7 +25,7 @@ describe Api::V1::RegistrationsController do
       request.env['devise.mapping'] = Devise.mappings[:user]
       @credentials = {:email => 'asd@def.com', :password => 'password', :password_confirmation => 'password', :authentication_token => 'asd'}
       @user = FactoryGirl.create(:user, @credentials)
-      @user.confirm!
+#@user.confirm!
     end
     
     it "should change the password" do
