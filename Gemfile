@@ -3,8 +3,9 @@ ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
 gem 'pg'
+gem 'thin'
+gem 'batman-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -54,4 +55,3 @@ gem "rspec-rails", ">= 2.0.1", group: [:development, :test]
 gem "simple_form", "~> 3.0.0.rc"
 gem 'factory_girl_rails'
 gem 'spork', '~> 1.0rc', group: [:development, :test]
-gem 'thin'
