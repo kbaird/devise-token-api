@@ -1,9 +1,10 @@
 require "spec_helper"
 
 describe "routes for Devise" do
-  it "routes /api/v1/users/sign_in to the sessions controller" do
+
+  it "redirects /api/v1/users/sign_in via Batman.js" do
     { :get => "/api/v1/users/sign_in" }.
-      should route_to(:controller => "api/v1/sessions", :action => "new")
+      should route_to(controller: 'batman', action: 'index', redirect_path: 'api/v1/users/sign_in')
   end
 
   it "routes /api/v1/users/sign_out to the sessions controller" do
@@ -21,8 +22,9 @@ describe "routes for Devise" do
       should route_to(:controller => "api/v1/registrations", :action => "update")
   end
 
-  it "routes /api/v1/users/password/new to the passwords controller" do
+  it "redirects /api/v1/users/password/new via Batman.js" do
     { :get => "/api/v1/users/password/new" }.
-      should route_to(:controller => "api/v1/passwords", :action => "new")
+      should route_to(controller: 'batman', redirect_path: 'api/v1/users/password/new', action: 'index')
   end
+
 end

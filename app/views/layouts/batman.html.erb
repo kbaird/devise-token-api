@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Devise Token Api</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "devise_token_api" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div data-yield="main"></div>
+
+<script type="text/javascript">
+  DeviseTokenApi.run();
+</script>
+
+</body>
+</html>

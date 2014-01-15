@@ -1,0 +1,1 @@
+class DeviseTokenApi.ApplicationController extends Batman.Controller
